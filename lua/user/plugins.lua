@@ -62,6 +62,15 @@ return packer.startup(function(use)
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "lunarvim/darkplus.nvim"
+  use { "norcalli/nvim-colorizer.lua", event = "BufRead" }
+
+  -- search
+   use "nacro90/numb.nvim" -- :number peeking
+   use "ggandor/lightspeed.nvim" -- f search
+
+   -- edit
+   use { "Pocco81/AutoSave.nvim", event = "InsertEnter" }
+   use { "yamatsum/nvim-cursorline", event = "BufWinEnter" }
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -70,6 +79,7 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-cmdline" -- cmdline completions
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
+  use "hrsh7th/cmp-nvim-lua"
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
@@ -80,6 +90,8 @@ return packer.startup(function(use)
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+  use "ray-x/lsp_signature.nvim" -- show function signature
+  use "hrsh7th/cmp-nvim-lsp-signature-help" -- cmp help lsp signature
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"

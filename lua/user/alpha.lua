@@ -28,7 +28,8 @@ local function footer()
 	-- local fortune = handle:read("*a")
 	-- handle:close()
 	-- return fortune
-	return "chrisatmachine.com"
+	-- return "chrisatmachine.com"
+  return "总有人赢得，那为什么不能是我呢？"
 end
 
 dashboard.section.footer.val = footer()
