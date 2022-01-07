@@ -62,15 +62,20 @@ return packer.startup(function(use)
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "lunarvim/darkplus.nvim"
-  use { "norcalli/nvim-colorizer.lua", event = "BufRead" }
+  use "norcalli/nvim-colorizer.lua"
 
-  -- search
-   use "nacro90/numb.nvim" -- :number peeking
-   use "ggandor/lightspeed.nvim" -- f search
-
-   -- edit
-   use { "Pocco81/AutoSave.nvim", event = "InsertEnter" }
-   use { "yamatsum/nvim-cursorline", event = "BufWinEnter" }
+  -- edit
+  use "nacro90/numb.nvim" -- :number peeking
+  use "ggandor/lightspeed.nvim" -- f search
+  use { "yamatsum/nvim-cursorline", event = "BufWinEnter" } -- cursor line
+  use "phaazon/hop.nvim"
+  use "andymass/vim-matchup"
+  use "karb94/neoscroll.nvim"
+  use "nathom/filetype.nvim"
+  use "folke/zen-mode.nvim"
+  use "jghauser/mkdir.nvim"
+  use "tpope/vim-surround"
+  use "windwp/nvim-spectre"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -92,6 +97,13 @@ return packer.startup(function(use)
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
   use "ray-x/lsp_signature.nvim" -- show function signature
   use "hrsh7th/cmp-nvim-lsp-signature-help" -- cmp help lsp signature
+  use "filipdutescu/renamer.nvim" -- refactor rename
+  use "NTBBloodbath/rest.nvim"
+  use { "folke/trouble.nvim", cmd = "TroubleToggle" }
+  use "folke/todo-comments.nvim"
+  use { "folke/lua-dev.nvim", event = "BufRead", ft = {"lua"} }
+  use { "fatih/vim-go", event = "BufRead", ft = { "go", "go.mod", "go.sum" } }
+
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
@@ -102,12 +114,18 @@ return packer.startup(function(use)
     run = ":TSUpdate",
   }
   use "JoosepAlviste/nvim-ts-context-commentstring"
+  use "ChristianChiarulli/nvim-ts-rainbow"
+  use "romgrk/nvim-treesitter-context"
+  use "nvim-treesitter/playground"
+  use "windwp/nvim-ts-autotag"
+  use "mizlan/iswap.nvim"
 
   -- Git
   use "lewis6991/gitsigns.nvim"
-
-  -- lua
-  use "folke/lua-dev.nvim"
+  use "sindrets/diffview.nvim"
+  use "TimUntersberger/neogit"
+  use "f-person/git-blame.nvim"
+  use "ruifm/gitlinker.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
